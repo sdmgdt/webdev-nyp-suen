@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab4B flex</title>
+    <style>
+        *{margin:5px;padding:0;box-sizing: border-box;border: 1px black solid;text-align: center}
+        body{display:flex;flex-direction: row;flex-wrap:wrap;}
+        body>div{flex-basis:100%;}
+        header{background:lightgray;flex-basis:100%}
+        nav{background:lightblue}
+        section{background:green;flex-basis:63%}
+        section.orange{background:orange;flex-basis:33%;}
+        footer{background:lightgreen;flex-basis:100%}
+        p{background:plum;flex-basis:100%}
+        p.below{flex-basis:48%;}
+        article{display:flex;flex-direction:row;flex-wrap:wrap;background: pink;}
+        aside{background:yellow;flex-basis:47%;}
+    </style>
+</head>
+<body>
+    body
+    <div>
+        <header>
+            header
+            <nav>nav</nav>
+        </header>
+    </div>
+    <section>
+        section
+        <header>
+            header
+        </header>
+        <article>
+            article
+            <header>
+                header
+            </header>
+            <p>p</p>
+            <p class="below">p</p>
+            <aside>aside</aside>
+            <footer>footer</footer>
+        </article>
+    </section>
+
+    <section class="orange">
+        section
+        <header>
+            header
+        </header>
+        <nav>
+            nav
+        </nav>
+    </section>
+    <footer>footer</footer>
+
+</body>
+</html>
