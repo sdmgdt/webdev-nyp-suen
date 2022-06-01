@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            border:1px black solid;
         }
 
         body {
@@ -27,25 +28,34 @@
         }
 
         nav {
-            background-color: green;
-
-
+            background-color: green;width:25%;
+            float:left;
+            height:200px;
         }
 
         main {
             background-color: cyan;
-
+            width:50%;
+            float:left;
+            height:200px;
         }
 
         aside {
-            background-color: blue;
+            background-color: blue;width:25%;
+            float:left;
+            height:200px;
 
        }
 
         footer {
             background-color: yellow;
 
+
             height: 150px;
+        }
+        .clearfix{ /*to stop floating*/
+            float:none;
+            clear:both;
         }
     </style>
 </head>
@@ -53,9 +63,14 @@
     <header>
         <h1>Holy Grail Layout</h1>
     </header>
-    <nav>Nav</nav>
-    <main>Main Content</main>
+    <nav><a href="#">Education</a><a href="#">Hobbies</a></nav>
+    <main>Main Content
+
+This is my hobby. bah bah bah
+
+    </main>
     <aside>Aside/Sidebar</aside>
-    <footer>Footer</footer>
+    
+    <footer class="clearfix">Footer</footer>
 </body>
 </html>
