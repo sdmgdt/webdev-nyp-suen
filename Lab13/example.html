@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex13a</title>
+    <style>
+        /* desktop first ??? */
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            /* other screen size */
+            background-color: gray;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .a-panel {
+            flex-basis: 100%;
+            padding: 10px;
+            border: 1px solid white;
+        }
+
+        .b-panel {
+            flex-basis: 50%;
+            padding: 10px;
+            border: 1px solid white;
+
+        }
+
+        .c-panel {
+            flex-basis: 50%;
+            padding: 10px;
+            border: 1px solid white;
+
+        }
+
+        .d-panel {
+            flex-basis: 50%;
+            padding: 10px;
+            border: 1px solid white;
+
+        }
+
+        .e-panel {
+            flex-basis: 50%;
+            padding: 10px;
+            border: 1px solid white;
+
+        }
+
+        @media screen and (max-width: 1080px) {
+            body {
+                background-color: red;
+            }
+
+            .d-panel {
+                flex-basis: 100%;
+            }
+
+            .e-panel {
+                flex-basis: 100%;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            body {
+                background-color: green;
+            }
+
+            .a-panel {
+                flex-basis: 30%;
+            }
+
+            .b-panel {
+                flex-basis: 40%;
+            }
+
+            .c-panel {
+                flex-basis: 30%;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            body {
+                background-color: blue;
+                color: white;
+            }
+
+            .a-panel,
+            .b-panel,
+            .c-panel,
+            .d-panel,
+            .e-panel {
+                flex-basis: 100%;
+            }
+
+            .d-panel {
+                order: 2;
+            }
+            .c-panel {
+                order: 3;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="a-panel">
+            <p>Education</p>
+        </div>
+        <div class="b-panel">
+            <p>Hobbies/CCA</p>
+        </div>
+        <div class="c-panel">
+            <p>Aspirations</p>
+        </div>
+        <div class="d-panel">
+            <p>Contacts</p>
+        </div>
+        <div class="e-panel">
+            <p>Others</p>
+        </div>
+    </div>
+</body>
+
+</html>
