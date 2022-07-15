@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex12a Soln</title>
+</head>
+<h1>Registration Info</h1>
+<form action="#" method="get">
+    <label for="userid">User ID: </label>
+    
+    <div id="userid">No userid</div>
+    <p>
+        <label for="passwd">Password: </label>
+        <div id="passwd"></div>
+    </p>
+    <p>
+        <label for="name">Name: </label>
+        <div id="name"></div>
+    </p>
+    <p>
+        <label for="address">Address: </label>
+        <div id="address"></div>
+    </p>
+    <p>
+        <label for="country">Country: </label>
+        <div id="country"></div>
+      
+    </p>
+    <p>
+        <label for="zipcode">ZIP Code: </label>
+        <div id="zipcode"></div>
+    </p>
+    <p>
+        <label for="email">Email: </label>
+
+    </p>
+    <p>
+        <label>Sex: </label>
+
+    </p>
+    <p>
+        <label>Language: </label>
+
+    </p>
+    <p>
+        <label>About: </label>
+
+    </p>
+    <p>
+        <button id="backtoform">Back to form</button>
+        <button id="cleardata">Clear data</button>
+    </p>
+</form>
+</body>
+<script>
+
+    LoadData();
+    function LoadData(e){
+        //e.preventDefault();
+        //alert("hello");
+        userid.innerHTML=sessionStorage.getItem("userid");
+        passwd.innerHTML=sessionStorage.getItem("password");
+        name.innerHTML=sessionStorage.getItem("name");
+        address.innerHTML=sessionStorage.getItem("address");
+        country.innerHTML=sessionStorage.getItem("country");
+        // sessionStorage.setItem("name",name.value);
+        // sessionStorage.setItem("address",address.value);
+        // sessionStorage.setItem("country",country.value);
+        // location.href="Ex12a-page2.html";
+
+
+    }
+    backtoform.addEventListener("click",a);
+    cleardata.addEventListener("click",()=>{sessionStorage.clear();alert("all session data cleared!")});
+    function a(e){e.preventDefault();window.location.href="Ex12a-page1.html";}
+
+
+
+</script>
+
+</html>
