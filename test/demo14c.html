@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{transition:all 0.5s}
+        .darkmode{color:white;background:black}
+        .highlight{border:1px solid red;background:greenyellow}
+        .visualimpairmode{color:cyan;background:darkslateblue;font-size:1.5em}
+        .hideme{display:none}
+    </style>
+</head>
+
+<body>
+    <h1>Main Title</h1>
+    <div>
+        <h2>Chapter 1</h2>
+        <p>generate using loren ipsum generator</p>
+    </div>
+
+    <div>
+        <h2>Chapter 2</h2>
+        <p>generate using loren ipsum generator</p>
+    </div>
+    <div>
+        <h2>Chapter 3</h2>
+        <p>generate using loren ipsum generator</p>
+    </div>
+    <button id="darkmode">Toggle Dark Mode</button>
+    <button id="nohighlights">Reset Highlights</button>
+    <button id="hicontrastmode">Toggle Hi Contrast Mode</button>
+</body>
+<script>
+    darkmode.addEventListener("click",(e)=>{document.getElementsByTagName("body")[0].classList.toggle("darkmode")});
+    let para=document.querySelectorAll("p");
+    for(let i=0;i<para.length;i++){
+        //para[i].style.display="none";
+        para[i].addEventListener("click",()=>{para[i].classList.add("highlight")})
+    }
+    nohighlights.addEventListener("click",()=>{
+        for(let i=0;i<para.length;i++){
+        //para[i].style.display="none";
+       para[i].classList.remove("highlight");
+    }
+    });
+    hicontrastmode.addEventListener("click",(e)=>{document.getElementsByTagName("body")[0].classList.toggle("visualimpairmode")});
+    let h2=document.querySelectorAll("h2");
+    for(let i=0;i<h2.length;i++){
+        //para[i].style.display="none";
+        h2[i].addEventListener("click",()=>{h2[i].nextElementSibling.classList.toggle("hideme")})
+    }
+    </script>
+    
+</html>
