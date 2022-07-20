@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 30% 40% 30%;
+            height: 100vh;
+            grid-template-rows: 100px 1fr 100px;
+        }
+        header {
+            background-color: red;
+            /* grid-column-start: 1 ;
+            grid-column-end: 4 ; */
+            grid-column: 1/4;
+   
+            
+            display: flex;
+    justify-content: center;
+    flex-direction: column;
+        }
+
+        header h1 {
+text-align: center;
+        }
+        nav {
+            background-color: green;
+        }
+
+        main {
+            background-color: black;
+        }
+        aside {
+            background-color: blue;
+        }
+
+        footer{
+            background-color: yellow;
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+
+<body>
+    <header><h1>Holy Grail Layout</h1></header>
+    <nav>Nav</nav>
+    <main>Main Content</main>
+    <aside>Sidebard</aside>
+    <footer>Footer</footer>
+</body>
+
+</html>

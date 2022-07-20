@@ -1,0 +1,92 @@
+/* DESKTOP FIRST */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section {
+    min-height: 40vh;
+    font-size: 10vw;
+    flex-grow: 1;
+}
+
+.section-a {
+    flex-basis: 50%;
+    background: red;
+}
+
+.section-b {
+    flex-basis: 50%;
+    background: green;
+}
+
+.section-c {
+    flex-basis: 30%;
+    background: blue;
+}
+
+.section-d {
+    flex-basis: 40%;
+    background: cyan;
+}
+
+.section-e {
+    flex-basis: 30%;
+    background: yellow;
+}
+
+
+@media screen and (max-width: 960px) {
+
+    /*screen with < 960px*/
+    .section-a {
+        flex-basis: 100%;
+    }
+
+    .section-b {
+        flex-basis: 20%;
+    }
+
+    .section-d {
+        flex-basis: 50%;
+    }
+
+    .section-e {
+        flex-basis: 100%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    /*screen with < 768px*/
+    .section-a {
+        order: 3;
+    }
+
+    .section-e {
+        order: 1;
+    }
+
+    .section-c {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    /*screen with < 320px*/
+    .section-a,
+    .section-b,
+    .section-c,
+    .section-d,
+    .section-e {
+        flex-basis: 100%;
+    }
+}

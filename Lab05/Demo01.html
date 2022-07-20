@@ -1,49 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Demo01</title>
     <style>
-        div {
-            width: 100px;
-            height: 100px;
-            border:5px red solid;
-            transition:width 2s;
+        div{
+            width:100px;height:100px;
+            background:green;
+            color:red;
+            transition: width 2s; /*use 2s to change width*/
+            transition: background 2s; /*use 2s to change width*/
+
         }
+        div:hover{
+            background:yellow;
+            width:300px;
 
-        div:hover {
-            width: 300px
         }
-
-
-        /* The animation code */
-@keyframes example2 {
-0% {background-color: red;width:50px;left:100px}
-25% {background-color: yellow;width:80px;top:100px}
-50% {background-color: blue;;width:120px;left:300px}
-100% {background-color: green;width:75px;top:200px}
-}
-/* The element to apply the animation to */
-.ani2 {
-width: 100px;
-height: 100px;
-background-color: red;
-animation-name: example2;
-animation-duration: 4s;
-position:relative;
-}
     </style>
 </head>
-
-
 <body>
-    <div>Box</div>
-    <p class="ani2">
-        Hello
-    </p>
+    <div>SomeDiv</div>
+    
 </body>
-
 </html>

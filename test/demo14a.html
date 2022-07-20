@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo 14a</title>
+   
+</head>
+<style>
+    #testContent{transition:all 1s} /*add transition effect*/
+    .bgPink {background:pink}
+    .fgCyan {color:cyan}
+    .szBig{font-size:2em}
+</style>
+<body>
+    <div id="testContent">Test Content</div> 
+</body>
+<script>
+//uncomment line by line see what each does you copy to the console to see the effect
+console.log("classes:"+testContent.classList); //show all classes for testContent
+testContent.className="bgPink"; //set className
+testContent.className="fgCyan"; //set another className
+testContent.className+=" bgPink"; //append another classname
+console.log("classes:"+testContent.classList);
+testContent.classList.add("szBig"); //add classname to the list using code
+testContent.classList.remove("bgPink"); //remove class
+testContent.classList.toggle("szBig"); //if added then remove, if not added then add
+console.log("classes:"+testContent.classList);
+
+testContent.addEventListener("click",(e)=>{ //make the words clickable
+    testContent.classList.toggle("fgCyan");
+    testContent.classList.toggle("szBig");
+    testContent.classList.toggle("bgPink");
+});
+</script>
+</html>
