@@ -1,5 +1,6 @@
 <div id="myEle" class="red blue green">Some words</div>
 <style>
+    #testContent{transition:all 2s}
     .bgPink {background:pink}
     .fgCyan {color:cyan}
     .szBig{font-size:2em}
@@ -7,3 +8,12 @@
 <body>
    <div id="testContent">Test Content</div>
 </body>
+<script>
+document.querySelector("#testContent").addEventListener(
+    "click",()=>{
+        testContent.classList.toggle("fgCyan");
+        testContent.classList.toggle("szBig");
+        testContent.classList.toggle("bgPink");
+    }
+)
+</script>
