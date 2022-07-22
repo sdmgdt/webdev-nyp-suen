@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* div{width:100px; height:100px;transition:width 1s;border:1px black solid}
+    div:hover{width:300px} */
+/* The animation code */
+@keyframes aniseq1 {
+  0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+/* The element to apply the animation to */
+.ani1:hover {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: aniseq1;
+  animation-duration: 4s;
+}
+
+
+</style>
+<body>
+    <div></div>
+    <section class="ani1">something</section>
+</body>
+</html>
