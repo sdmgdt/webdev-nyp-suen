@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,50 +13,49 @@
         }
 
         body {
-            display: grid;
-            grid-template-columns: 30% 40% 30%;
+            width: 100vw;
             height: 100vh;
-            grid-template-rows: 100px 1fr 100px;
         }
+
         header {
             background-color: red;
-            /* grid-column-start: 1 ;
-            grid-column-end: 4 ; */
-            grid-column: 1/4;
-   
-            
-            display: flex;
-    justify-content: center;
-    flex-direction: column;
+            height: 150px;
         }
 
         header h1 {
-text-align: center;
+            text-align: center;
         }
+
         nav {
             background-color: green;
+
+
         }
 
         main {
-            background-color: black;
-        }
-        aside {
-            background-color: blue;
+            background-color: cyan;
+
         }
 
-        footer{
+        aside {
+            background-color: blue;
+
+       }
+
+        footer {
             background-color: yellow;
-            grid-column: 1/4;
+
+            height: 150px;
         }
     </style>
 </head>
-
 <body>
-    <header><h1>Holy Grail Layout</h1></header>
+    <header>
+        <h1>Holy Grail Layout</h1>
+    </header>
     <nav>Nav</nav>
     <main>Main Content</main>
-    <aside>Sidebard</aside>
+    <aside>Aside/Sidebar</aside>
     <footer>Footer</footer>
 </body>
-
 </html>

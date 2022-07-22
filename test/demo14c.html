@@ -35,23 +35,44 @@
     <button id="hicontrastmode">Toggle Hi Contrast Mode</button>
 </body>
 <script>
-    darkmode.addEventListener("click",(e)=>{document.getElementsByTagName("body")[0].classList.toggle("darkmode")});
+    darkmode.addEventListener("click",
+        (e)=>{
+            document.getElementsByTagName("body")[0].classList.toggle("darkmode")
+        });
+    
+    hicontrastmode.addEventListener("click",
+        (e)=>{
+            //document.getElementsByTagName("body")[0].classList.toggle("visualimpairmode")
+            document.querySelector("body").classList.toggle("visualimpairmode")
+        });
+
     let para=document.querySelectorAll("p");
-    for(let i=0;i<para.length;i++){
-        //para[i].style.display="none";
-        para[i].addEventListener("click",()=>{para[i].classList.add("highlight")})
+    for(let i=0;i<para.length;i++){        //allow highlight every para
+        // para[i].addEventListener("click", //1st method arrow function
+        //     ()=>{
+        //         para[i].classList.add("highlight")
+        // });    
+        para[i].addEventListener("click", //2nd method call another function
+           Dohighlight
+        );
     }
-    nohighlights.addEventListener("click",()=>{
-        for(let i=0;i<para.length;i++){
-        //para[i].style.display="none";
-       para[i].classList.remove("highlight");
+    function Dohighlight(e){
+        e.currentTarget.classList.add("highlight") //2nd method
     }
-    });
-    hicontrastmode.addEventListener("click",(e)=>{document.getElementsByTagName("body")[0].classList.toggle("visualimpairmode")});
-    let h2=document.querySelectorAll("h2");
+
+    nohighlights.addEventListener("click",
+        ()=>{
+            for(let i=0;i<para.length;i++){
+                para[i].classList.remove("highlight");
+            }
+        });
+    
+    let h2=document.querySelectorAll("h2"); //target all h2
     for(let i=0;i<h2.length;i++){
-        //para[i].style.display="none";
-        h2[i].addEventListener("click",()=>{h2[i].nextElementSibling.classList.toggle("hideme")})
+        h2[i].addEventListener("click",
+            ()=>{
+                h2[i].nextElementSibling.classList.toggle("hideme")
+            })
     }
     </script>
     
