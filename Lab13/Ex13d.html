@@ -4,21 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>13c soln</title>
+    <title>13D soln</title>
     <style>
         body{background:grey;}
         .darkblue{background:darkblue;}
         .lightblue{background:lightblue;}
         .green{background:green;}
+        .red{background:red}
+        .orange{background: orange;}
         .container{display:flex;flex-wrap:wrap;}
         .box{width:100%;height:10em;}
         @media screen and (min-width:768px){
-            .darkblue{width:25%;}
-            .lightblue{width:75%;}
+            .lightblue,.green{width:50%;}
         }
         @media screen and (min-width:1280px){
-            .darkblue,.green{width:25%;}
-            .lightblue{width:50%;}
+            .darkblue,.lightblue{width:50%;}
+            .green,.red,.orange{width:33.33%;}
         }
     </style>
 </head>
@@ -27,6 +28,8 @@
         <div class="box darkblue"></div>
         <div class="box lightblue"></div>
         <div class="box green"></div>
+        <div class="box red"></div>
+        <div class="box orange"></div>
     </div>
     
 </body>
